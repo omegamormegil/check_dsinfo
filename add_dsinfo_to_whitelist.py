@@ -1,15 +1,25 @@
 #!/usr/bin/env python3
-# add_dsinfo_to_whitelist.py
-# This script is intended to update or merge new Docker info configurations 
-# into the existing whitelist file 'docker_info_whitelist.yaml'. 
-# It can be used to dynamically add new configurations detected in a Docker environment.
-#
-# Usage (not implemented, conceptual):
-# - Run with arguments:
-#   python add_dsinfo_to_whitelist.py <new_docker_info_file> <existing_whitelist_file> <output_whitelist_file>
-# - Where <new_docker_info_file> is a file with new Docker configurations,
-#   <existing_whitelist_file> is the current whitelist, and 
-#   <output_whitelist_file> is where the updated whitelist will be saved.
+"""
+check_dsinfo
+============
+A simple utility to check configuration of Mirantis Container Runtime or the docker engine by comparing the output of `docker info` to a whitelist. 
+
+Author: Nathan Jones
+Email: njones@mirantis.com
+============
+add_dsinfo_to_whitelist.py
+
+This script is intended to update or merge new Docker info configurations 
+into the existing whitelist file 'docker_info_whitelist.yaml'. 
+It can be used to dynamically add new configurations detected in a Docker or MCR environment.
+
+Usage:
+- Run with arguments:
+  python add_dsinfo_to_whitelist.py <new_docker_info_file> <existing_whitelist_file> <output_whitelist_file>
+- Where <new_docker_info_file> is a file with new Docker configurations,
+  <existing_whitelist_file> is the current whitelist, and 
+  <output_whitelist_file> is where the updated whitelist will be saved.
+"""
 
 import yaml
 import re

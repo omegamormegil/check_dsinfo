@@ -1,13 +1,24 @@
-# docker_info_whitelist.yaml
-# This YAML file serves as a whitelist for Docker configurations. It contains known and 
-# accepted configurations for Docker environments. Use this file in conjunction with 
-# 'check_docker_config.py' to verify Docker setup against a set of pre-approved configurations.
-# 
-# Usage:
-# - Edit this file to add or remove configurations as needed.
-# - Comment out configurations to temporarily disable them without removing.
-# - Uncomment to re-enable previously disabled configurations.
-# - The script 'check_docker_config.py' checks Docker info against this whitelist.
+"""
+check_dsinfo
+============
+A simple utility to check configuration of Mirantis Container Runtime or the docker engine by comparing the output of `docker info` to a whitelist. 
+
+Author: Nathan Jones
+Email: njones@mirantis.com
+============
+docker_info_whitelist.yaml
+
+This YAML file serves as a whitelist for Docker configurations. It contains known and 
+accepted configurations for Docker environments. Use this file in conjunction with 
+'check_dsinfo.py' to verify Docker setup against a set of pre-approved configurations.
+
+Usage:
+- Edit this file to add or remove configurations as needed.
+- Add expected configuration to the relevant section so they don't display in the output of 'check_dsinfo.py'
+- Comment out configurations which are red flags rather than removing.
+- Uncomment to re-enable previously disabled configurations.
+- The script 'check_dsinfo.py' checks Docker info against this whitelist.
+"""
 
 # Client:
 #   Context:    default
